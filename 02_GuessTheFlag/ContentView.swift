@@ -8,57 +8,27 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var showingAlert = false
+    
     var body: some View {
-        VStack {
-            Button {
+        Button("Show Alert") {
+            showingAlert = true
+        }
+        .alert("Important message", isPresented: $showingAlert) {
+            Button("OK") {
                 
-            } label: {
-                Text("Delete")
             }
-            .buttonStyle(.bordered)
-            Button(role: .destructive) {
-                        
-                    } label: {
-                        Text("Delete")
-                    }
-            Button {
-                        
-                    } label: {
-                        Text("Delete")
-                    }
-                    .buttonStyle(.borderedProminent)
-            Button(role: .destructive) {
-                        
-                    } label: {
-                        Text("Delete")
-                    }
-                    .buttonStyle(.borderedProminent)
-            Button(role: .destructive) {
-                        
-                    } label: {
-                        Text("Delete")
-                    }
-                    .buttonStyle(.borderedProminent)
-                    .tint(.cyan)
-            Button {
+            Button("Not OK") {
                 
-            } label: {
-                Image(systemName: "trash")
-                    .foregroundColor(.yellow)
             }
-            .buttonStyle(.borderedProminent)
-            .tint(.green)
-            Button {
+            Button("2 OK") {
                 
-            } label: {
-                Label("Edit", systemImage: "pencil")
             }
-            .buttonStyle(.borderedProminent)
-            .tint(.orange)
-            
-            Image(systemName: "heart.fill")
-                .renderingMode(.original)
-
+            Button("3 OK") {
+                
+            }
+        } message: {
+            Text("Please read this")
         }
 
     }
