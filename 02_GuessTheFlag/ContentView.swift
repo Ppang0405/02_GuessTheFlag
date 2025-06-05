@@ -9,7 +9,58 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        AngularGradient(gradient: Gradient(colors: [.red, .yellow, .green, .blue, .purple, .pink]), center: .center)
+        VStack {
+            Button {
+                
+            } label: {
+                Text("Delete")
+            }
+            .buttonStyle(.bordered)
+            Button(role: .destructive) {
+                        
+                    } label: {
+                        Text("Delete")
+                    }
+            Button {
+                        
+                    } label: {
+                        Text("Delete")
+                    }
+                    .buttonStyle(.borderedProminent)
+            Button(role: .destructive) {
+                        
+                    } label: {
+                        Text("Delete")
+                    }
+                    .buttonStyle(.borderedProminent)
+            Button(role: .destructive) {
+                        
+                    } label: {
+                        Text("Delete")
+                    }
+                    .buttonStyle(.borderedProminent)
+                    .tint(.cyan)
+            Button {
+                
+            } label: {
+                Image(systemName: "trash")
+                    .foregroundColor(.yellow)
+            }
+            .buttonStyle(.borderedProminent)
+            .tint(.green)
+            Button {
+                
+            } label: {
+                Label("Edit", systemImage: "pencil")
+            }
+            .buttonStyle(.borderedProminent)
+            .tint(.orange)
+            
+            Image(systemName: "heart.fill")
+                .renderingMode(.original)
+
+        }
+
     }
 }
 
