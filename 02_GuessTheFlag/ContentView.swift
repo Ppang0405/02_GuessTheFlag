@@ -9,12 +9,19 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack(alignment: .leading, spacing: 20) {
-            Text("Hello, World!")
-            
-            Image(systemName: "suit.heart.fill")
-                .foregroundColor(.pink)
+        ZStack {
+            Color.blue
+            Color.secondary
+                .edgesIgnoringSafeArea(.all)
+            Text("your content")
         }
+    }
+}
+
+struct BackgroundView: View {
+    var body: some View {
+        Color.blue
+            .edgesIgnoringSafeArea(.all)
     }
 }
 
